@@ -111,7 +111,9 @@ router.post('/',passport.authenticate('jwt',{session:false}),(req, res, next) =>
 
 });
 
-router.delete('/:id',passport.authenticate('jwt',{session:false}),(req, res, next) => {
+// ,passport.authenticate('jwt',{session:false})
+router.delete('/:id',(req, res, next) => {
+    console.log("yikes")
     cartItemId = req.params.id;
     const userId = req.user.id;
     // let fetchedCart;

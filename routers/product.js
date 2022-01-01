@@ -11,8 +11,8 @@ router.get('/',(req, res, next) => {
         next(err);
     });
 });
-
-router.get('/:id', passport.authenticate('jwt', {session: false}),(req, res, next) => {
+//passport.authenticate('jwt', {session: false})
+router.get('/:id' ,(req, res, next) => {
     const id = parseInt(req.params.id);
     if (!Number.isInteger(id)) {
         const error = new Error("Invalid Input");
