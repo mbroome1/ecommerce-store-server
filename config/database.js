@@ -6,10 +6,12 @@ const username = process.env.DB_USERNAME || null;
 const password = process.env.DB_PASSWORD || null;
 const host = process.env.DB_HOST || null;
 const dialect = process.env.DB_DIALECT || null;
+const port = process.env.PORT || null;
 
 const sequelize = new Sequelize(database, username, password, {
     host: host,
-    dialect: dialect
+    dialect: dialect,
+    port: port
   });
 
 module.exports = sequelize;

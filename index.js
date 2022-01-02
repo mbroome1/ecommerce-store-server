@@ -36,7 +36,7 @@ const port = process.env.PORT || 3001;
   // ));
 
   app.use((req,res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000', 'https://mbroome.nz','https://www.mbroome.nz');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS' );
     // res.setHeader('Access-Control-Allow-Methods', '*' );
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -84,6 +84,7 @@ app.use('*',(req,res, next) => {
 // Error handling middleware route
 app.use((error, req, res, next) => {
   console.log("Error Handling Middleware called");
+  console.log(error)
   // if(error.statusCode !== 404) {
   //   error.statusCode = 500;
   //   error.message = 'Something went wrong';
