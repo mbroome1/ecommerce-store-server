@@ -7,7 +7,7 @@ const username = process.env.DB_USERNAME || null;
 const password = process.env.DB_PASSWORD || null;
 const host = process.env.DB_HOST || null;
 const dialect = process.env.DB_DIALECT || null;
-const port = process.env.PORT || null;
+const port = process.env.DB_PORT || null;
 
 
 // create database, ensure 'sqlite3' in your package.json
